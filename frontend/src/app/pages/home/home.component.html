@@ -1,0 +1,41 @@
+
+
+
+
+
+
+<app-navbar></app-navbar>
+
+
+<div class="container" style="padding: 2%;">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">slno</th>
+            <th scope="col">Name</th>
+            <th scope="col">AGE</th>
+            <th scope="col">EMAIL</th>
+            <th scope="col">PLACE</th>
+
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of students; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.age}}</td> 
+            <td>{{student.email}}</td>
+            <td>{{student.place}}</td>
+            <td>
+                <button class="btn btn-info" (click)="editStudent(student._id)" >Edit</button>&nbsp;
+                <button class="btn btn-info" (click)="deleteStudent(student._id)">Delete</button>&nbsp;
+            </td>           
+          </tr>          
+        </tbody>
+      
+      </table>
+      
+      
+</div>
+
